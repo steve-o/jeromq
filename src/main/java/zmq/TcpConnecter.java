@@ -119,24 +119,24 @@ public class TcpConnecter extends Own implements IPollEvents {
         super.process_term (linger_);
     }
 
-    @Override
+// JDK6    @Override
     public void in_event() {
         // connected but attaching to stream engine is not completed. do nothing
         return;
     }
     
-    @Override
+// JDK6    @Override
     public void out_event() {
         // connected but attaching to stream engine is not completed. do nothing
         return;
     }
     
-    @Override
+// JDK6    @Override
     public void accept_event() {
         throw new UnsupportedOperationException();
     }
     
-    @Override
+// JDK6    @Override
     public void connect_event ()
     {
         boolean err = false;
@@ -191,7 +191,7 @@ public class TcpConnecter extends Own implements IPollEvents {
         socket.event_connected (endpoint, fd);
     }
     
-    @Override
+// JDK6    @Override
     public void timer_event(int id_) {
         timer_started = false;
         start_connecting ();

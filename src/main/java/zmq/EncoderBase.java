@@ -61,7 +61,7 @@ abstract public class EncoderBase implements IEncoder {
     //  are filled to a supplied buffer. If no buffer is supplied (data_
     //  points to NULL) decoder object will provide buffer of its own.
 
-    @Override
+// JDK6    @Override
     public Transfer get_data (ByteBuffer buffer) 
     {
         if (buffer == null)
@@ -129,7 +129,7 @@ abstract public class EncoderBase implements IEncoder {
 
     }
 
-    @Override
+// JDK6    @Override
     public boolean has_data ()
     {
         return to_write > 0;

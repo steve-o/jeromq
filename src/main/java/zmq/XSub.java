@@ -54,7 +54,7 @@ public class XSub extends SocketBase {
     static {
         send_subscription = new Trie.ITrieHandler() {
             
-            @Override
+// JDK6            @Override
             public void added(byte[] data_, int size, Object arg_) {
                 
                 Pipe pipe = (Pipe) arg_;

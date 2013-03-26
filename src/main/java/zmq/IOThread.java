@@ -73,7 +73,7 @@ public class IOThread extends ZObject implements IPollEvents {
     }
 
 
-    @Override
+// JDK6    @Override
     public void in_event() {
         //  TODO: Do we want to limit number of commands I/O thread can
         //  process in a single go?
@@ -92,22 +92,22 @@ public class IOThread extends ZObject implements IPollEvents {
 
     }
 
-    @Override
+// JDK6    @Override
     public void out_event() {
         throw new UnsupportedOperationException();
     }
     
-    @Override
+// JDK6    @Override
     public void connect_event() {
         throw new UnsupportedOperationException();
     }
 
-    @Override
+// JDK6    @Override
     public void accept_event() {
         throw new UnsupportedOperationException();
     }
     
-    @Override
+// JDK6    @Override
     public void timer_event(int id_) {
         throw new UnsupportedOperationException();
     }

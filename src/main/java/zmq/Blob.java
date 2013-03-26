@@ -28,7 +28,7 @@ public class Blob {
     private int hash = 0;
     
     public Blob(byte[] data_) {
-        buf = Arrays.copyOf(data_, data_.length);
+        buf = java5.util.Arrays.copyOf(data_, data_.length);
     }
     
     public Blob(int size) {

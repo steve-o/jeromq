@@ -46,17 +46,17 @@ public class MultiMap<K extends Comparable<? super K>, V> implements Map<K, V> {
             this.key = key;
             this.value = value;
         }
-        @Override
+// JDK6        @Override
         public K getKey() {
             return key;
         }
 
-        @Override
+// JDK6        @Override
         public V getValue() {
             return value;
         }
 
-        @Override
+// JDK6        @Override
         public V setValue(V value) {
             V old = this.value;
             this.value = value;
@@ -74,73 +74,73 @@ public class MultiMap<K extends Comparable<? super K>, V> implements Map<K, V> {
         public MultiMapEntrySet(MultiMap<K,V> map) {
             this.map = map;
         }
-        @Override
+// JDK6        @Override
         public boolean add(java.util.Map.Entry<K, V> arg0) {
             throw new UnsupportedOperationException();
         }
 
-        @Override
+// JDK6        @Override
         public boolean addAll(
                 Collection<? extends java.util.Map.Entry<K, V>> arg0) {
             throw new UnsupportedOperationException();
         }
 
-        @Override
+// JDK6        @Override
         public void clear() {
             throw new UnsupportedOperationException();
         }
 
-        @Override
+// JDK6        @Override
         public boolean contains(Object arg0) {
             throw new UnsupportedOperationException();
         }
 
-        @Override
+// JDK6        @Override
         public boolean containsAll(Collection<?> arg0) {
             throw new UnsupportedOperationException();
         }
 
-        @Override
+// JDK6        @Override
         public boolean isEmpty() {
             throw new UnsupportedOperationException();
         }
 
-        @Override
+// JDK6        @Override
         public Iterator<java.util.Map.Entry<K, V>> iterator() {
             it = map.keys.entrySet().iterator();
             return this;
         }
 
-        @Override
+// JDK6        @Override
         public boolean remove(Object arg0) {
             throw new UnsupportedOperationException();
         }
 
-        @Override
+// JDK6        @Override
         public boolean removeAll(Collection<?> arg0) {
             throw new UnsupportedOperationException();
         }
 
-        @Override
+// JDK6        @Override
         public boolean retainAll(Collection<?> arg0) {
             throw new UnsupportedOperationException();
         }
 
-        @Override
+// JDK6        @Override
         public int size() {
             throw new UnsupportedOperationException();
         }
 
-        @Override
+// JDK6        @Override
         public Object[] toArray() {
             throw new UnsupportedOperationException();
         }
 
-        @Override
+// JDK6        @Override
         public <T> T[] toArray(T[] arg0) {
             throw new UnsupportedOperationException();
         }
-        @Override
+// JDK6        @Override
         public boolean hasNext() {
             if (iit == null || !iit.hasNext()) {
                 
@@ -156,13 +156,13 @@ public class MultiMap<K extends Comparable<? super K>, V> implements Map<K, V> {
             return true;
                 
         }
-        @Override
+// JDK6        @Override
         public Map.Entry<K, V> next() {
             id = iit.next();
             return new MultiMapEntry(key, map.values.get(id));
         }
         
-        @Override
+// JDK6        @Override
         public void remove() {
             iit.remove();
             map.values.remove(id);
@@ -172,28 +172,28 @@ public class MultiMap<K extends Comparable<? super K>, V> implements Map<K, V> {
         
     }
     
-    @Override
+// JDK6    @Override
     public void clear() {
         keys.clear();
         values.clear();
     }
 
-    @Override
+// JDK6    @Override
     public boolean containsKey(Object key) {
         return keys.containsKey(key);
     }
 
-    @Override
+// JDK6    @Override
     public boolean containsValue(Object value) {
         return values.containsValue(value);
     }
 
-    @Override
+// JDK6    @Override
     public Set<Map.Entry<K, V>> entrySet() {
         return new MultiMapEntrySet(this);
     }
 
-    @Override
+// JDK6    @Override
     public V get(Object key) {
         ArrayList<Long> l = keys.get(key);
         if (l == null)
@@ -201,17 +201,17 @@ public class MultiMap<K extends Comparable<? super K>, V> implements Map<K, V> {
         return values.get(l.get(0));
     }
 
-    @Override
+// JDK6    @Override
     public boolean isEmpty() {
         return keys.isEmpty();
     }
 
-    @Override
+// JDK6    @Override
     public Set<K> keySet() {
         return keys.keySet();
     }
 
-    @Override
+// JDK6    @Override
     public V put(K key, V value) {
         ArrayList<Long> ids = keys.get(key);
         if (ids == null) {
@@ -227,12 +227,12 @@ public class MultiMap<K extends Comparable<? super K>, V> implements Map<K, V> {
         return null;
     }
 
-    @Override
+// JDK6    @Override
     public void putAll(Map<? extends K, ? extends V> arg0) {
         throw new UnsupportedOperationException();
     }
 
-    @Override
+// JDK6    @Override
     public V remove (Object key) 
     {
         ArrayList <Long> l = keys.get (key);
@@ -245,12 +245,12 @@ public class MultiMap<K extends Comparable<? super K>, V> implements Map<K, V> {
         return old;
     }
 
-    @Override
+// JDK6    @Override
     public int size() {
         return values.size();
     }
 
-    @Override
+// JDK6    @Override
     public Collection<V> values() {
         return values.values();
     }

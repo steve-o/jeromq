@@ -23,7 +23,7 @@ public class V1Encoder extends EncoderBase
         next_step ((byte[])null, 0, message_ready, true);
     }
 
-    @Override
+// JDK6    @Override
     public void set_msg_source (IMsgSource msg_source_)
     {
         msg_source = msg_source_;

@@ -36,12 +36,12 @@ public interface Transfer {
             buf = buf_;
         }
         
-        @Override
+// JDK6        @Override
         public final int transferTo (WritableByteChannel s) throws IOException {
             return s.write (buf);
         }
 
-        @Override
+// JDK6        @Override
         public final int remaining () {
             return buf.remaining ();
         }
@@ -63,7 +63,7 @@ public interface Transfer {
             remaining = parent.remaining () + (int) count;
         }
         
-        @Override
+// JDK6        @Override
         public final int transferTo(WritableByteChannel s) throws IOException {
             int sent = 0;
             if (parent.remaining () > 0)
@@ -84,7 +84,7 @@ public interface Transfer {
             return sent;
         }
 
-        @Override
+// JDK6        @Override
         public final int remaining () {
             return remaining;
         }

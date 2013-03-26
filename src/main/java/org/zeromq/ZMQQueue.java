@@ -23,7 +23,7 @@ public class ZMQQueue implements Runnable {
         this.outSocket = outSocket;
     }
 
-    @Override
+// JDK6    @Override
     public void run()
     {
         zmq.ZMQ.zmq_proxy (inSocket.base(), outSocket.base(), null);

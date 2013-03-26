@@ -74,7 +74,7 @@ public class TcpListener extends Own implements IPollEvents {
         super.process_term (linger_);
     }
 
-    @Override
+// JDK6    @Override
     public void accept_event ()
     {
         SocketChannel fd = null ;
@@ -193,23 +193,23 @@ public class TcpListener extends Own implements IPollEvents {
         return sock.getChannel();
     }
 
-    @Override
+// JDK6    @Override
     public void in_event() {
         throw new UnsupportedOperationException();
     }
 
     
-    @Override
+// JDK6    @Override
     public void out_event() {
         throw new UnsupportedOperationException();
     }
 
-    @Override
+// JDK6    @Override
     public void connect_event() {
         throw new UnsupportedOperationException();
     }
 
-    @Override
+// JDK6    @Override
     public void timer_event(int id_) {
         throw new UnsupportedOperationException();
     }

@@ -23,6 +23,7 @@ import org.zeromq.ZMQ.Socket;
 
 import java.io.*;
 import java.util.*;
+import java5.util.*;
 
 /**
  * The ZMsg class provides methods to send and receive multipart messages
@@ -358,7 +359,7 @@ public class ZMsg implements Iterable<ZFrame>, Deque<ZFrame> {
                 PrintWriter pw = new PrintWriter(sw);
                 pw.printf("--------------------------------------\n");
                 for (ZFrame frame : frames) {
-                    pw.printf("[%03d] %s\n", frame.size(),
+                    pw.printf("[%03d] %s\n", frame.getData().length,
                             frame.toString());
                 }
                 out.append(sw.getBuffer());
@@ -410,69 +411,69 @@ public class ZMsg implements Iterable<ZFrame>, Deque<ZFrame> {
     }
 
     // ********* Implement Iterable Interface *************** //
-    @Override
+// JDK6     @Override
     public Iterator<ZFrame> iterator() {
         // TODO Auto-generated method stub
         return frames.iterator();
     }
 
     // ********* Implement Deque Interface ****************** //
-    @Override
+// JDK6     @Override
     public boolean addAll(Collection<? extends ZFrame> arg0) {
         return frames.addAll(arg0);
     }
 
-    @Override
+// JDK6     @Override
     public void clear() {
         frames.clear();
 
     }
 
-    @Override
+// JDK6     @Override
     public boolean containsAll(Collection<?> arg0) {
         return frames.containsAll(arg0);
     }
 
-    @Override
+// JDK6     @Override
     public boolean isEmpty() {
         return frames.isEmpty();
     }
 
-    @Override
+// JDK6     @Override
     public boolean removeAll(Collection<?> arg0) {
         return frames.removeAll(arg0);
     }
 
-    @Override
+// JDK6     @Override
     public boolean retainAll(Collection<?> arg0) {
         return frames.retainAll(arg0);
     }
 
-    @Override
+// JDK6     @Override
     public Object[] toArray() {
         return frames.toArray();
     }
 
-    @Override
+// JDK6     @Override
     public <T> T[] toArray(T[] arg0) {
         return frames.toArray(arg0);
     }
 
-    @Override
+// JDK6     @Override
     public boolean add(ZFrame e) {
         if (frames == null)
             frames = new ArrayDeque<ZFrame>();
         return frames.add(e);
     }
 
-    @Override
+// JDK6     @Override
     public void addFirst(ZFrame e) {
         if (frames == null)
             frames = new ArrayDeque<ZFrame>();
         frames.addFirst(e);
     }
 
-    @Override
+// JDK6     @Override
     public void addLast(ZFrame e) {
         if (frames == null)
             frames = new ArrayDeque<ZFrame>();
@@ -480,22 +481,22 @@ public class ZMsg implements Iterable<ZFrame>, Deque<ZFrame> {
 
     }
 
-    @Override
+// JDK6     @Override
     public boolean contains(Object o) {
         return frames.contains(o);
     }
 
-    @Override
+// JDK6     @Override
     public Iterator<ZFrame> descendingIterator() {
         return frames.descendingIterator();
     }
 
-    @Override
+// JDK6     @Override
     public ZFrame element() {
         return frames.element();
     }
 
-    @Override
+// JDK6     @Override
     public ZFrame getFirst() {
         try {
             return frames.getFirst();
@@ -504,7 +505,7 @@ public class ZMsg implements Iterable<ZFrame>, Deque<ZFrame> {
         }
     }
 
-    @Override
+// JDK6     @Override
     public ZFrame getLast() {
         try {
             return frames.getLast();
@@ -513,33 +514,33 @@ public class ZMsg implements Iterable<ZFrame>, Deque<ZFrame> {
         }
     }
 
-    @Override
+// JDK6     @Override
     public boolean offer(ZFrame e) {
         if (frames == null)
             frames = new ArrayDeque<ZFrame>();
         return frames.offer(e);
     }
 
-    @Override
+// JDK6     @Override
     public boolean offerFirst(ZFrame e) {
         if (frames == null)
             frames = new ArrayDeque<ZFrame>();
         return frames.offerFirst(e);
     }
 
-    @Override
+// JDK6     @Override
     public boolean offerLast(ZFrame e) {
         if (frames == null)
             frames = new ArrayDeque<ZFrame>();
         return frames.offerLast(e);
     }
 
-    @Override
+// JDK6     @Override
     public ZFrame peek() {
         return frames.peek();
     }
 
-    @Override
+// JDK6     @Override
     public ZFrame peekFirst() {
         try {
             return frames.peekFirst();
@@ -548,7 +549,7 @@ public class ZMsg implements Iterable<ZFrame>, Deque<ZFrame> {
         }
     }
 
-    @Override
+// JDK6     @Override
     public ZFrame peekLast() {
         try {
             return frames.peekLast();
@@ -557,22 +558,22 @@ public class ZMsg implements Iterable<ZFrame>, Deque<ZFrame> {
         }
     }
 
-    @Override
+// JDK6    @Override
     public ZFrame poll() {
         return frames.poll();
     }
 
-    @Override
+// JDK6    @Override
     public ZFrame pollFirst() {
         return frames.pollFirst();
     }
 
-    @Override
+// JDK6    @Override
     public ZFrame pollLast() {
         return frames.pollLast();
     }
 
-    @Override
+// JDK6    @Override
     public ZFrame pop() {
         if (frames == null)
             frames = new ArrayDeque<ZFrame>();
@@ -596,24 +597,24 @@ public class ZMsg implements Iterable<ZFrame>, Deque<ZFrame> {
         return frame.toString();
     }
 
-    @Override
+// JDK6    @Override
     public void push(ZFrame e) {
         if (frames == null)
             frames = new ArrayDeque<ZFrame>();
         frames.push(e);
     }
 
-    @Override
+// JDK6    @Override
     public ZFrame remove() {
         return frames.remove();
     }
 
-    @Override
+// JDK6    @Override
     public boolean remove(Object o) {
         return frames.remove(o);
     }
 
-    @Override
+// JDK6    @Override
     public ZFrame removeFirst() {
         try {
             return frames.removeFirst();
@@ -622,12 +623,12 @@ public class ZMsg implements Iterable<ZFrame>, Deque<ZFrame> {
         }
     }
 
-    @Override
+// JDK6    @Override
     public boolean removeFirstOccurrence(Object o) {
         return frames.removeFirstOccurrence(o);
     }
 
-    @Override
+// JDK6    @Override
     public ZFrame removeLast() {
         try {
             return frames.removeLast();
@@ -636,12 +637,12 @@ public class ZMsg implements Iterable<ZFrame>, Deque<ZFrame> {
         }
     }
 
-    @Override
+// JDK6    @Override
     public boolean removeLastOccurrence(Object o) {
         return frames.removeLastOccurrence(o);
     }
 
-    @Override
+// JDK6    @Override
     public int size() {
         return frames.size();
     }

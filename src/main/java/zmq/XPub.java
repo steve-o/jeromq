@@ -20,8 +20,8 @@
 */ 
 package zmq;
 
-import java.util.ArrayDeque;
-import java.util.Deque;
+import java5.util.ArrayDeque;
+import java5.util.Deque;
 
 public class XPub extends SocketBase {
 
@@ -57,7 +57,7 @@ public class XPub extends SocketBase {
     static {
         mark_as_matching = new Mtrie.IMtrieHandler() {
 
-            @Override
+// JDK6            @Override
             public void invoke(Pipe pipe_, byte[] data, Object arg_) {
                 XPub self = (XPub) arg_;
                 self.dist.match (pipe_);
@@ -67,7 +67,7 @@ public class XPub extends SocketBase {
         
         send_unsubscription = new Mtrie.IMtrieHandler() {
             
-            @Override
+// JDK6            @Override
             public void invoke(Pipe pipe_, byte[] data_, Object arg_) {
                 XPub self = (XPub) arg_;
 

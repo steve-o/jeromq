@@ -260,7 +260,7 @@ public class StreamEngine implements IEngine, IPollEvents, IMsgSink {
         session = null;
     }
     
-    @Override
+// JDK6    @Override
     public void terminate () 
     {
         if (!terminating && encoder != null && encoder.has_data ())
@@ -272,7 +272,7 @@ public class StreamEngine implements IEngine, IPollEvents, IMsgSink {
         destroy ();
     }
 
-    @Override
+// JDK6    @Override
     public void in_event () 
     {
         
@@ -335,7 +335,7 @@ public class StreamEngine implements IEngine, IPollEvents, IMsgSink {
 
     }
     
-    @Override
+// JDK6    @Override
     public void out_event () 
     {
         //  If write buffer is empty, try to read new data from the encoder.
@@ -404,26 +404,26 @@ public class StreamEngine implements IEngine, IPollEvents, IMsgSink {
     }
     
 
-    @Override
+// JDK6    @Override
     public void connect_event() {
         throw new UnsupportedOperationException();
         
     }
 
-    @Override
+// JDK6    @Override
     public void accept_event() {
         throw new UnsupportedOperationException();
         
     }
 
-    @Override
+// JDK6    @Override
     public void timer_event(int id_) {
         throw new UnsupportedOperationException();
         
     }
 
     
-    @Override
+// JDK6    @Override
     public void activate_out() {
         io_object.set_pollout (handle);
 
@@ -436,7 +436,7 @@ public class StreamEngine implements IEngine, IPollEvents, IMsgSink {
 
 
     
-    @Override
+// JDK6    @Override
     public void activate_in ()
     {
         if (!io_enabled) {
@@ -561,7 +561,7 @@ public class StreamEngine implements IEngine, IPollEvents, IMsgSink {
         return true;
     }
     
-    @Override
+// JDK6    @Override
     public boolean push_msg (Msg msg_)
     {
         assert (options.type == ZMQ.ZMQ_PUB || options.type == ZMQ.ZMQ_XPUB);

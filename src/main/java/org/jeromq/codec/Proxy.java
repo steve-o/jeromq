@@ -61,7 +61,7 @@ public class Proxy {
             
         }
         
-        @Override
+// JDK6        @Override
         public void set_msg_sink (IMsgSink msg_sink_)
         {
             msg_sink = msg_sink_;
@@ -166,7 +166,7 @@ public class Proxy {
         abstract protected byte[] getHeader(byte[] body);
         abstract protected int headerSize() ;
         
-        @Override
+// JDK6        @Override
         public void set_msg_source (IMsgSource msg_source_)
         {
             msg_source = msg_source_;

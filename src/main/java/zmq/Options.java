@@ -194,7 +194,7 @@ public class Options {
                 ZError.errno(ZError.EINVAL);
                 return false;
             }
-            identity = Arrays.copyOf(val, val.length);
+            identity = java5.util.Arrays.copyOf(val, val.length);
             identity_size = (byte)identity.length;
             return true;
             

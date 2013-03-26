@@ -61,7 +61,7 @@ public class Address {
             }
         }   
 
-        if (!protocol.isEmpty() && !address.isEmpty ()) {
+        if (protocol.length () > 0 && address.length () > 0) {
             return protocol + "://" + address;
         }
         

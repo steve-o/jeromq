@@ -59,7 +59,7 @@ public class Decoder extends DecoderBase {
     
 
     //  Set the receiver of decoded messages.
-    @Override
+// JDK6    @Override
     public void set_msg_sink (IMsgSink msg_sink_) 
     {
         msg_sink = msg_sink_;

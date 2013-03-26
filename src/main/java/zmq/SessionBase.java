@@ -254,7 +254,7 @@ public class SessionBase extends Own implements
         }
     }
 
-    @Override
+// JDK6    @Override
     public void terminated(Pipe pipe_) 
     {
         //  Drop the reference to the deallocated pipe.
@@ -274,7 +274,7 @@ public class SessionBase extends Own implements
             proceed_with_term ();
     }
 
-    @Override
+// JDK6    @Override
     public void read_activated(Pipe pipe_) 
     {
         // Skip activating if we're detaching this pipe
@@ -289,7 +289,7 @@ public class SessionBase extends Own implements
             pipe.check_read ();
     }
     
-    @Override
+// JDK6    @Override
     public void write_activated (Pipe pipe_)
     {
         // Skip activating if we're detaching this pipe
@@ -303,7 +303,7 @@ public class SessionBase extends Own implements
             engine.activate_in ();
     }
 
-    @Override
+// JDK6    @Override
     public void hiccuped (Pipe pipe_)
     {
         //  Hiccups are always sent from session to socket, not the other
@@ -416,7 +416,7 @@ public class SessionBase extends Own implements
     }
 
 
-    @Override
+// JDK6    @Override
     public void timer_event(int id_) {
         
         //  Linger period expired. We can proceed with termination even though
@@ -501,25 +501,25 @@ public class SessionBase extends Own implements
 
 
 
-    @Override
+// JDK6    @Override
     public void in_event() {
         throw new UnsupportedOperationException();
         
     }
 
-    @Override
+// JDK6    @Override
     public void out_event() {
         throw new UnsupportedOperationException();
         
     }
 
-    @Override
+// JDK6    @Override
     public void connect_event() {
         throw new UnsupportedOperationException();
         
     }
 
-    @Override
+// JDK6    @Override
     public void accept_event() {
         throw new UnsupportedOperationException();
         
