@@ -57,7 +57,7 @@ public class TcpAddress implements Address.IZAddress {
     }
     
 
-    @Override
+// JDK6    @Override
     public void resolve(String name_, boolean ipv4only_) {
         //  Find the ':' at end that separates address from the port number.
         int delimiter = name_.lastIndexOf(':');
@@ -112,7 +112,7 @@ public class TcpAddress implements Address.IZAddress {
 
     }
 
-    @Override
+// JDK6    @Override
     public SocketAddress address() {
         return address;
     }

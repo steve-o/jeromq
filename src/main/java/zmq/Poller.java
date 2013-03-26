@@ -163,7 +163,7 @@ public class Poller extends PollerBase implements Runnable {
         selector.wakeup();
     }
     
-    @Override
+// JDK6    @Override
     public void run () {
         int returnsImmediately = 0;
 

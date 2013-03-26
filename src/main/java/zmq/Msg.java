@@ -88,7 +88,7 @@ public class Msg {
         if (src != null) {
             size = src.length;
             if (copy)
-                data = Arrays.copyOf(src, src.length);
+                data = java5.util.Arrays.copyOf(src, src.length);
             else
                 data = src;
         }

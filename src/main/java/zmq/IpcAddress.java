@@ -38,7 +38,7 @@ public class IpcAddress implements Address.IZAddress {
         return "ipc://" + name;
     }
 
-    @Override
+// JDK6    @Override
     public void resolve(String name_, boolean ip4only_) {
         
         name = name_;
@@ -57,7 +57,7 @@ public class IpcAddress implements Address.IZAddress {
         }
     }
 
-    @Override
+// JDK6    @Override
     public SocketAddress address() {
         return address;
     }

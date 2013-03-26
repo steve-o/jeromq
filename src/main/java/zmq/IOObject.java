@@ -96,27 +96,27 @@ public class IOObject implements IPollEvents {
     }
 
     
-    @Override
+// JDK6    @Override
     public final void in_event() {
         handler.in_event();
     }
 
-    @Override
+// JDK6    @Override
     public final void out_event() {
         handler.out_event();
     }
     
-    @Override
+// JDK6    @Override
     public final void connect_event() {
         handler.connect_event();
     }
 
-    @Override
+// JDK6    @Override
     public final void accept_event() {
         handler.accept_event();
     }
     
-    @Override
+// JDK6    @Override
     public final void timer_event(int id_) {
         handler.timer_event(id_);
     }

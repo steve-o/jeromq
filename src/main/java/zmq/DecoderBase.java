@@ -173,7 +173,7 @@ abstract public class DecoderBase implements IDecoder {
     //  Returns true if the decoder has been fed all required data
     //  but cannot proceed with the next decoding step.
     //  False is returned if the decoder has encountered an error.
-    @Override
+// JDK6    @Override
     public boolean stalled ()
     {
         //  Check whether there was decoding error.

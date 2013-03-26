@@ -898,7 +898,7 @@ public abstract class SocketBase extends Own
     }
 
 
-    @Override
+//    @Override
     public void in_event() {
         //  This function is invoked only once the socket is running in the context
         //  of the reaper thread. Process any commands from other threads/sockets
@@ -908,22 +908,22 @@ public abstract class SocketBase extends Own
         check_destroy ();
     }
 
-    @Override
+//    @Override
     public void out_event() {
         throw new UnsupportedOperationException();
     }
     
-    @Override
+//    @Override
     public void connect_event() {
         throw new UnsupportedOperationException();
     }
 
-    @Override
+//    @Override
     public void accept_event() {
         throw new UnsupportedOperationException();
     }
     
-    @Override
+//    @Override
     public void timer_event(int id_) {
         throw new UnsupportedOperationException();        
     }
@@ -950,19 +950,19 @@ public abstract class SocketBase extends Own
         }
     }
 
-    @Override
+//    @Override
     public void read_activated (Pipe pipe_) 
     {
         xread_activated (pipe_);
     }
 
-    @Override
+//    @Override
     public void write_activated (Pipe pipe_)
     {
         xwrite_activated (pipe_);
     }
     
-    @Override
+//    @Override
     public void hiccuped (Pipe pipe_) 
     {
         if (options.delay_attach_on_connect == 1)
@@ -973,7 +973,7 @@ public abstract class SocketBase extends Own
     }
     
 
-    @Override
+//    @Override
     public void terminated(Pipe pipe_) {
         //  Notify the specific socket type about the pipe termination.
         xterminated (pipe_);

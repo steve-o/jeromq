@@ -167,6 +167,10 @@ public class ZMQ {
         return new Context(ioThreads);
     }
 
+    public static Context context() {
+        return new Context(1);
+    }
+
     public static class Context {
 
         private final Ctx ctx;

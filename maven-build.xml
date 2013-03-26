@@ -71,11 +71,11 @@
            nowarn="false" 
            debug="true" 
            optimize="false" 
-           deprecation="true" 
-           target="1.6" 
+           deprecation="false" 
+           target="1.5" 
            verbose="false" 
            fork="false" 
-           source="1.6">
+           source="1.5">
       <src>
         <pathelement location="${maven.build.srcDir.0}"/>
       </src>
@@ -96,11 +96,11 @@
            nowarn="false" 
            debug="true" 
            optimize="false" 
-           deprecation="true" 
-           target="1.6" 
+           deprecation="false" 
+           target="1.5" 
            verbose="false" 
            fork="false" 
-           source="1.6">
+           source="1.5">
       <src>
         <pathelement location="${maven.build.testDir.0}"/>
       </src>
@@ -235,10 +235,10 @@
           unless="maven.mode.offline">
     <mkdir dir="${maven.repo.local}"/>
     <mkdir dir="${maven.repo.local}/log4j/log4j/1.2.16"/>
-    <get src="https://oss.sonatype.org/content/groups/public//log4j/log4j/1.2.16/log4j-1.2.16.jar" 
+<!--    <get src="https://oss.sonatype.org/content/groups/public//log4j/log4j/1.2.16/log4j-1.2.16.jar" 
          dest="${maven.repo.local}/log4j/log4j/1.2.16/log4j-1.2.16.jar" 
          usetimestamp="false" 
-         ignoreerrors="true"/>
+         ignoreerrors="true"/> -->
     <get src="http://repo1.maven.org/maven2/log4j/log4j/1.2.16/log4j-1.2.16.jar" 
          dest="${maven.repo.local}/log4j/log4j/1.2.16/log4j-1.2.16.jar" 
          usetimestamp="false" 
