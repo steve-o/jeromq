@@ -231,7 +231,7 @@ public class ZContext implements Closeable
     }
 
 
-    @Override
+// JDK6    @Override
     public void close() throws IOException
     {
         destroy();
