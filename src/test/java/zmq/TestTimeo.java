@@ -32,7 +32,7 @@ public class TestTimeo {
         Worker(Ctx ctx_) {
             ctx = ctx_;
         }
-        @Override
+// JDK6        @Override
         public void run() {
             
             ZMQ.zmq_sleep (1);

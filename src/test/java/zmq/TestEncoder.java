@@ -171,7 +171,7 @@ public class TestEncoder {
             return true;
         }
 
-        @Override
+// JDK6        @Override
         public void set_msg_source (IMsgSource msg_source_)
         {
             source = msg_source_;

@@ -30,8 +30,8 @@ public class lbbroker3
      */
     private static class ClientTask implements ZThread.IDetachedRunnable
     {
-        @Override
-        public void run (Object ... args)
+// JDK6        @Override
+        public void run (Object[] args)
         {
             ZContext context = new ZContext();
 
@@ -55,8 +55,8 @@ public class lbbroker3
      */
     private static class WorkerTask implements ZThread.IDetachedRunnable
     {
-        @Override
-        public void run (Object ... args)
+// JDK6        @Override
+        public void run (Object[] args)
         {
             ZContext context = new ZContext();
 
@@ -97,7 +97,7 @@ public class lbbroker3
      */
     private static class FrontendHandler implements ZLoop.IZLoopHandler {
 
-        @Override
+// JDK6        @Override
         public int handle(ZLoop loop, PollItem item, Object arg_) {
 
             LBBroker arg = (LBBroker)arg_;
@@ -118,7 +118,7 @@ public class lbbroker3
 
     private static class BackendHandler implements ZLoop.IZLoopHandler {
 
-        @Override
+// JDK6        @Override
         public int handle(ZLoop loop, PollItem item, Object arg_) {
 
             LBBroker arg = (LBBroker)arg_;

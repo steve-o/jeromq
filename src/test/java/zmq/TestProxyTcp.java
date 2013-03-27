@@ -164,7 +164,7 @@ public class TestProxyTcp {
             return state() == read_body;
         }
 
-        @Override
+// JDK6        @Override
         public void set_msg_sink (IMsgSink msg_sink_)
         {
             msg_sink = msg_sink_;
@@ -244,7 +244,7 @@ public class TestProxyTcp {
             return true;
         }
 
-        @Override
+// JDK6        @Override
         public void set_msg_source (IMsgSource msg_source_)
         {
             msg_source = msg_source_;

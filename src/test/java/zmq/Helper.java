@@ -56,16 +56,16 @@ public class Helper {
         public byte[] data () {
             return buf;
         }
-        @Override
+// JDK6        @Override
         public void close() throws IOException {
             
         }
-        @Override
+// JDK6        @Override
         public boolean isOpen() {
             return true;
         }
         
-        @Override
+// JDK6        @Override
         public int write(ByteBuffer src) throws IOException {
             int remaining = src.remaining();
             if (remaining > bufsize)

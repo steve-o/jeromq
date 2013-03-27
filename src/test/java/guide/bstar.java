@@ -192,7 +192,7 @@ public class bstar
     //  Publish our state to peer
     private static IZLoopHandler SendState = new IZLoopHandler () {
 
-        @Override
+// JDK6        @Override
         public int handle(ZLoop loop, PollItem item, Object arg)
         {
             bstar self = (bstar) arg;
@@ -204,7 +204,7 @@ public class bstar
     //  Receive state from peer, execute finite state machine
     private static IZLoopHandler RecvState = new IZLoopHandler () {
 
-        @Override
+// JDK6        @Override
         public int handle(ZLoop loop, PollItem item, Object arg)
         {
             bstar self = (bstar) arg;
@@ -220,7 +220,7 @@ public class bstar
     //  Application wants to speak to us, see if it's possible
     private static IZLoopHandler VoterReady = new IZLoopHandler () {
 
-        @Override
+// JDK6        @Override
         public int handle(ZLoop loop, PollItem item, Object arg)
         {
             bstar self = (bstar) arg;

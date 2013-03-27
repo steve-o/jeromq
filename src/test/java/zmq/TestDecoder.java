@@ -172,7 +172,7 @@ public class TestDecoder {
             return state() == read_body;
         }
 
-        @Override
+// JDK6        @Override
         public void set_msg_sink (IMsgSink msg_sink)
         {
             sink = msg_sink;

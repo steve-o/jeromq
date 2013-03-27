@@ -36,7 +36,7 @@ public class InprocLat {
             this.roundtrip_count = roundtrip_count;
         }
         
-        @Override
+// JDK6        @Override
         public void run() {
             SocketBase s = ZMQ.zmq_socket (ctx_, ZMQ.ZMQ_REP);
             if (s == null) {

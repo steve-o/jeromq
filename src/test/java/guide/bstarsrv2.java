@@ -38,7 +38,7 @@ public class bstarsrv2
 {
     private static IZLoopHandler Echo = new IZLoopHandler()
     {
-        @Override
+// JDK6        @Override
         public int handle(ZLoop loop, PollItem item, Object arg)
         {
             ZMsg msg = ZMsg.recvMsg(item.getSocket());

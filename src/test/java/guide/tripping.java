@@ -13,7 +13,7 @@ import org.zeromq.ZMsg;
 public class tripping {
 
     static class Broker implements Runnable {
-        @Override
+// JDK6        @Override
         public void run() {
             ZContext ctx = new ZContext();
             Socket frontend = ctx.createSocket(ZMQ.ROUTER);
@@ -57,7 +57,7 @@ public class tripping {
 
     static class Worker implements Runnable {
 
-        @Override
+// JDK6        @Override
         public void run() {
             ZContext ctx = new ZContext();
             Socket worker = ctx.createSocket(ZMQ.DEALER);
@@ -78,7 +78,7 @@ public class tripping {
     static class Client implements Runnable {
         private static int SAMPLE_SIZE = 10000;
 
-        @Override
+// JDK6        @Override
         public void run() {
             ZContext ctx = new ZContext();
             Socket client = ctx.createSocket(ZMQ.DEALER);

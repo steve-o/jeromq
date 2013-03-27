@@ -47,7 +47,7 @@ public class TestZLoop {
         
         ZLoop.IZLoopHandler s_timer_event = new ZLoop.IZLoopHandler() {
 
-            @Override
+// JDK6            @Override
             public int handle(ZLoop loop, PollItem item, Object arg) {
                 ((Socket)arg).send("PING", 0);
                 return 0;
@@ -56,7 +56,7 @@ public class TestZLoop {
         
         ZLoop.IZLoopHandler s_socket_event = new ZLoop.IZLoopHandler() {
 
-            @Override
+// JDK6            @Override
             public int handle(ZLoop loop, PollItem item, Object arg) {
                 //  Just end the reactor
                 return -1;
@@ -99,12 +99,12 @@ public class TestZLoop {
         
         ZLoop.IZLoopHandler s_timer_event = new ZLoop.IZLoopHandler() {
 
-            @Override
+// JDK6            @Override
             public int handle(ZLoop loop, PollItem item, Object arg) {
             	final long now = System.currentTimeMillis();
 
             	ZLoop.IZLoopHandler s_timer_event2 = new ZLoop.IZLoopHandler() {	
-					@Override
+// JDK6					@Override
 					public int handle(ZLoop loop, PollItem item, Object arg) {
 						final long now2 = System.currentTimeMillis();
 						assert (now2 >= now + 10);
@@ -119,7 +119,7 @@ public class TestZLoop {
         
         ZLoop.IZLoopHandler s_socket_event = new ZLoop.IZLoopHandler() {
 
-            @Override
+// JDK6            @Override
             public int handle(ZLoop loop, PollItem item, Object arg) {
                 //  Just end the reactor
                 return -1;
@@ -164,7 +164,7 @@ public class TestZLoop {
         
         ZLoop.IZLoopHandler s_timer_event = new ZLoop.IZLoopHandler() {
 
-            @Override
+// JDK6            @Override
             public int handle(ZLoop loop, PollItem item, Object arg) {
                 ((Socket)arg).send("PING", 0);
                 return 0;
@@ -173,11 +173,11 @@ public class TestZLoop {
         
         ZLoop.IZLoopHandler s_socket_event = new ZLoop.IZLoopHandler() {
 
-            @Override
+// JDK6            @Override
             public int handle(ZLoop loop, PollItem item, Object arg) {
             	final long now = System.currentTimeMillis();
             	ZLoop.IZLoopHandler s_timer_event2 = new ZLoop.IZLoopHandler() {	
-					@Override
+// JDK6					@Override
 					public int handle(ZLoop loop, PollItem item, Object arg) {
 						final long now2 = System.currentTimeMillis();
 						assert (now2 >= now + 10);
@@ -228,7 +228,7 @@ public class TestZLoop {
         
         ZLoop.IZLoopHandler s_timer_event = new ZLoop.IZLoopHandler() {
 
-            @Override
+// JDK6            @Override
             public int handle(ZLoop loop, PollItem item, Object arg) {
                 ((Socket)arg).send("PING", 0);
                 return 0;
@@ -237,11 +237,11 @@ public class TestZLoop {
         
         ZLoop.IZLoopHandler s_socket_event = new ZLoop.IZLoopHandler() {
 
-            @Override
+// JDK6            @Override
             public int handle(ZLoop loop, PollItem item, Object arg) {
                 //  After 10 msecs, fire an event that ends the reactor
             	ZLoop.IZLoopHandler s_shutdown_event = new ZLoop.IZLoopHandler() {
-                    @Override
+// JDK6                    @Override
                     public int handle(ZLoop loop, PollItem item, Object arg) {
                     	//  Just end the reactor
                         return -1;

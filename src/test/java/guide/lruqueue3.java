@@ -89,7 +89,7 @@ class LRUQueueArg
 class FrontendHandler implements ZLoop.IZLoopHandler
 {
 
-    @Override
+// JDK6    @Override
     public int handle(ZLoop loop, PollItem item, Object arg_)
     {
 
@@ -113,7 +113,7 @@ class FrontendHandler implements ZLoop.IZLoopHandler
 class BackendHandler implements ZLoop.IZLoopHandler
 {
 
-    @Override
+// JDK6    @Override
     public int handle(ZLoop loop, PollItem item, Object arg_)
     {
 

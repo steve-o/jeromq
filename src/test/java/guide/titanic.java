@@ -55,7 +55,7 @@ public class titanic
     static class TitanicRequest implements IAttachedRunnable
     {
 
-        @Override
+// JDK6        @Override
         public void run(Object[] args, ZContext ctx, Socket pipe)
         {
             mdwrkapi worker = new mdwrkapi(
@@ -112,7 +112,7 @@ public class titanic
     static class TitanicReply implements IDetachedRunnable
     {
 
-        @Override
+// JDK6        @Override
         public void run(Object[] args)
         {
             mdwrkapi worker = new mdwrkapi(
@@ -163,7 +163,7 @@ public class titanic
     //  once in a row:
     static class TitanicClose implements IDetachedRunnable
     {
-        @Override
+// JDK6        @Override
         public void run(Object[] args)
         {
             mdwrkapi worker = new mdwrkapi(

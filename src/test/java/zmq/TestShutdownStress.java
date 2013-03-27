@@ -30,7 +30,7 @@ public class TestShutdownStress {
         Worker(SocketBase s_) {
             s = s_;
         }
-        @Override
+// JDK6        @Override
         public void run() {
             boolean rc = ZMQ.zmq_connect (s, "tcp://127.0.0.1:5560");
             assert (rc);

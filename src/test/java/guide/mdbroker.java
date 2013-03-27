@@ -18,8 +18,8 @@ package guide;
 * You should have received a copy of the Lesser GNU General Public License
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
-import java.util.ArrayDeque;
-import java.util.Deque;
+import java5.util.ArrayDeque;
+import java5.util.Deque;
 import java.util.Formatter;
 import java.util.HashMap;
 import java.util.Map;
